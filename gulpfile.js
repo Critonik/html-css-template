@@ -21,7 +21,7 @@ const lint = () => {
 };
 
 const style = () => {
-    return gulp.src('src/style.scss')
+    return gulp.src('src/source/scss/style.scss')
         .pipe(plumber())
         .pipe(sass())
         .pipe(postcss([require('autoprefixer')]))
