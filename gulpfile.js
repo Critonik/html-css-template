@@ -37,6 +37,13 @@ const html = () => {
         .pipe(browserSync.stream());
 };
 
+const assets = () => {
+    return gulp.src(['assets/*.*', 'assets/**/*.*', '!assets/**/*.md', '!assets/*.md'])
+        .pipe(plumber())
+        .pipe(gulp.dest('build'))
+        .pipe(browserSync.stream());
+};
+
 const watch = () => {
     browserSync.init({
         server: 'build',
@@ -50,7 +57,7 @@ const watch = () => {
     gulp.watch('src/*.html', gulp.series(html));
 };
 
-const build = gulp.series(lint, style, html);
+const build = gulp.series(assets, lint, style, html);
 
 exports.stylelint = lint;
 exports.build = build;
