@@ -1,3 +1,9 @@
 // Входной файл для стилей
 @import "normalize.scss";
 @import "global.scss";
+@import "scaffolding.scss";
+@import "variables.scss";
+@import "blocks/page-header.scss";
+@import "blocks/find.scss";
+@import "blocks/balance.scss";
+@import "blocks/excerpt.scss";

@@ -10,6 +10,7 @@
 </head>
 <body>
     <header class="page-header">
+        <a href="#" class="page-header_arrow"></a>
         <div class="page-header_wrapper">
             <h1 class="page-header_title">Выписка</h1>
             <button type="submit" class="page-header_button">
@@ -22,20 +23,20 @@
                 <button type="submit" class="find_button"></button>
             </div>
             <div class="find_button-wrapper">
-                <button type="submit" class="find_choose-account">Расчетный счет ***2876</button>
-                <button type="submit" class="find_choose-counterparties">Все контрагенты</button>
-                <button type="button" class="find_choose-date">С начала месяца</button>
+                <button type="submit" class="find_choose find_choose-account">Расчетный счет ***2876</button>
+                <button type="submit" class="find_choose find_choose-counterparties">Все контрагенты</button>
+                <button type="button" class="find_choose find_choose-date">С начала месяца</button>
             </div>
         </section>
         <section class="balance">
             <div class="balance_wrapper">
                 <div class="balance_datesum-wrapper">
-                    <time class="balance_date" datetime="2019-05">22 марта, сегодня</time>
-                    <p class="balance_firstsum">128 000 000</p>
+                    <time class="balance_date balance_date-first" datetime="2019-05">22 марта, сегодня</time>
+                    <p class="balance_sum balance_firstsum">128 000 000</p>
                 </div>
                 <div class="balance_datesum-wrapper">
-                    <time class="balance_date" datetime="2019-05">22 марта, сегодня</time>
-                    <p class="balance_secondsum">90 000 000</p>
+                    <time class="balance_date balance_date-second" datetime="2019-05">22 марта, сегодня</time>
+                    <p class="balance_sum balance_secondsum">90 000 000</p>
                 </div>
             </div>
             <div class="balance_circulation-wrapper">
@@ -53,11 +54,11 @@
     <main class="excerpt">
         <ul class="excerpt_list">
             <li class="excerpt_list-item excerpt_list-header">
-                <input class="excerpt_list-checkbox" type="checkbox" id="excerpt_head">
+                <input class="excerpt_list-checkbox excerpt_list-checkbox-header" type="checkbox" id="excerpt_head">
                 <label class="excerpt_list-date" for="excerpt_head">Дата</label>
-                <p class="excerpt_list-counterparties">Контрагент</p>
-                <p class="excerpt_list-purpose">Назначение платежа</p>
-                <p class="excerpt_list-sum">Сумма</p>
+                <p class="excerpt_list-counterparties excerpt_list-counterparties-header">Контрагент</p>
+                <p class="excerpt_list-purpose excerpt_list-purpose-header">Назначение платежа</p>
+                <p class="excerpt_list-sum excerpt_list-sum-header">Сумма</p>
             </li>
             <li class="excerpt_list-item">
                 <input class="excerpt_list-checkbox" type="checkbox" id="excerpt_item[1]">
@@ -120,7 +121,7 @@
                 <label class="excerpt_list-date" for="excerpt_item[10]">00.00.0000</label>
                 <p class="excerpt_list-counterparties">Кузнецов Иван, ИП</p>
                 <p class="excerpt_list-purpose">Оплата налога на прибыль в бюджет субъекта РФ</p>
-                <p class="excerpt_list-sum">+ 6 700 ₽</p>
+                <p class="excerpt_list-sum excerpt_list-sum-in">+ 6 700 ₽</p>
             </li>
             <li class="excerpt_list-item">
                 <input class="excerpt_list-checkbox" type="checkbox" id="excerpt_item[11]">
@@ -141,7 +142,7 @@
                 <label class="excerpt_list-date" for="excerpt_item[13]">00.00.0000</label>
                 <p class="excerpt_list-counterparties">УФК по г. Санкт-Петербургу</p>
                 <p class="excerpt_list-purpose">Назначение платежа</p>
-                <p class="excerpt_list-sum">+ 1 000 ₽</p>
+                <p class="excerpt_list-sum excerpt_list-sum-in">+ 1 000 ₽</p>
             </li>
             <li class="excerpt_list-item">
                 <input class="excerpt_list-checkbox" type="checkbox" id="excerpt_item[14]">
@@ -176,7 +177,7 @@
                 <label class="excerpt_list-date" for="excerpt_item[18]">00.00.0000</label>
                 <p class="excerpt_list-counterparties">Кузнецов Иван, ИП</p>
                 <p class="excerpt_list-purpose">Назначение платежа</p>
-                <p class="excerpt_list-sum">+ 6 700 ₽</p>
+                <p class="excerpt_list-sum excerpt_list-sum-in">+ 6 700 ₽</p>
             </li>
             <li class="excerpt_list-item">
                 <input class="excerpt_list-checkbox" type="checkbox" id="excerpt_item[19]">
@@ -197,7 +198,7 @@
                 <label class="excerpt_list-date" for="excerpt_item[21]">00.00.0000</label>
                 <p class="excerpt_list-counterparties">УФК по г. Санкт-Петербургу</p>
                 <p class="excerpt_list-purpose">Назначение платежа</p>
-                <p class="excerpt_list-sum">+ 1 000 ₽</p>
+                <p class="excerpt_list-sum excerpt_list-sum-in">+ 1 000 ₽</p>
             </li>
             <li class="excerpt_list-item">
                 <input class="excerpt_list-checkbox" type="checkbox" id="excerpt_item[22]">

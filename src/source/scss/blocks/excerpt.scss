@@ -1,0 +1,87 @@
+.excerpt_list {
+    width: 1040px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.excerpt_list-item {
+    display: flex;
+    width: 1040px;
+    justify-content: space-between;
+    padding: 24px 0;
+    color: #b2b2b2;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.excerpt_list-header {
+    color: #b2b2b2;
+    font-size: 14px;
+    line-height: 18px;
+    border-bottom: 1px #b2b2b2 solid;
+}
+
+.excerpt_list-counterparties {
+    margin: 0;
+    color: #333;
+    width: 300px;
+}
+
+.excerpt_list-counterparties-header {
+    color: #b2b2b2;
+}
+
+.excerpt_list-purpose {
+    margin: 0;
+    width: 400px;
+}
+
+.excerpt_list-sum {
+    margin: 0;
+    color: #333;
+    width: 125px;
+    text-align: right;
+}
+
+.excerpt_list-sum-header {
+    color: #b2b2b2;
+}
+
+.excerpt_list-sum-in {
+    color: #48ac98;
+}
+
+.excerpt_list-checkbox {
+    display: none;
+}
+
+.excerpt_list-date {
+    width: 114px;
+    margin-left: 34px;
+    text-align: left;
+    position: relative;
+}
+
+.excerpt_list-date::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 1px solid #b2b2b2;
+    border-radius: 2px;
+    position: absolute;
+    left: -29px;
+    top: -2px;
+}
+
+.excerpt_list-checkbox:checked ~ .excerpt_list-date::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/Checked.png");
+    position: absolute;
+    left: -29px;
+    top: -2px;
+}

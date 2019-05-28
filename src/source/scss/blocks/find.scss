@@ -1,0 +1,37 @@
+.find_head-wrapper {
+    width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.find_title {
+    font-size: 24px;
+    line-height: 30px;
+    color: #b2b2b2;
+    margin: 0;
+    font-family: $tochkaSansReg;
+    font-weight: normal;
+}
+
+.find_button {
+    display: none;
+}
+
+.find_button-wrapper {
+    width: 1040px;
+    margin: 0 auto 60px;
+}
+
+.find_choose {
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 9px 10px;
+    background-color: #fff;
+    font-family: $tochkaSansReg;
+    font-weight: normal;
+}
