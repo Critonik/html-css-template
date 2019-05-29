@@ -1,37 +1,34 @@
 .balance {
-    width: 1040px;
+    width: 320px;
     margin: 0 auto 60px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .balance_wrapper {
     display: flex;
-    width: 724px;
+    flex-wrap: wrap;
+    width: 320px;
     margin-right: auto;
     padding: 30px 0 25px;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(51, 51, 51, 0.1);
-}
-
-.balance_circulation-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px 0;
-    width: 270px;
-    border-radius: 10px;
-    box-shadow: 0 20px 40px rgba(51, 51, 51, 0.1);
+    margin-bottom: 20px;
 }
 
 .balance_datesum-wrapper {
     position: relative;
+    width: 320px;
+    margin-bottom: 10px;
 }
 
 .balance_datesum-wrapper:first-child::after {
     content: "";
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: 105%;
+    right: 32px;
+    transform: rotate(90deg);
     background-image: url("../img/ArrowRight.png");
     background-repeat: no-repeat;
     background-size: 22px;
@@ -71,19 +68,29 @@
 }
 
 .balance_firstsum {
-    width: 288px;
+    width: 202px;
 }
 
 .balance_secondsum {
-    width: 316px;
+    width: 216px;
 }
 
 .balance_date-first {
-    width: 288px;
+    width: 188px;
 }
 
 .balance_date-second {
     width: 316px;
+}
+
+.balance_circulation-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    width: 270px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(51, 51, 51, 0.1);
 }
 
 .balance_coming {
@@ -107,3 +114,133 @@
     color: #48ac98;
     font-weight: bold;
 }
+
+@media (min-width: $tablet-width) {
+    .balance {
+        width: 680px;
+    }
+
+    .balance_wrapper {
+        width: 680px;
+    }
+
+    .balance_datesum-wrapper:first-child::after {
+        transform: none;
+        top: 40%;
+        right: 23px;
+    }
+
+    .balance_circulation-wrapper {
+        width: 480px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .balance {
+        width: 1040px;
+        margin: 0 auto 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-shrink: 1;
+        flex-direction: row;
+    }
+
+    .balance_wrapper {
+        display: flex;
+        width: 724px;
+        margin-right: auto;
+        margin-bottom: 0;
+        padding: 30px 0 25px;
+        border-radius: 10px;
+        box-shadow: 0 20px 40px rgba(51, 51, 51, 0.1);
+    }
+
+    .balance_circulation-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 0 30px;
+        width: 270px;
+        border-radius: 10px;
+        box-shadow: 0 20px 40px rgba(51, 51, 51, 0.1);
+    }
+
+    .balance_datesum-wrapper {
+        position: relative;
+    }
+
+    .balance_datesum-wrapper:first-child::after {
+        top: 50%;
+        right: 0;
+    }
+
+    .balance_date {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 0 30px;
+        color: #747474;
+    }
+
+    .balance_sum {
+        font-size: 30px;
+        line-height: 36px;
+        font-family: $tochkaSansDemi;
+        font-weight: bold;
+        margin: 0;
+        padding: 0 30px;
+    }
+
+    .balance_coming-wrapper {
+        display: flex;
+        width: 210px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .balance_expense-wrapper {
+        display: flex;
+        width: 210px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .balance_firstsum {
+        width: 288px;
+    }
+
+    .balance_secondsum {
+        width: 316px;
+    }
+
+    .balance_date-first {
+        width: 288px;
+    }
+
+    .balance_date-second {
+        width: 316px;
+    }
+
+    .balance_coming {
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+        color: #747474;
+    }
+
+    .balance_coming-in {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+
+    .balance_coming-out {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        color: #48ac98;
+        font-weight: bold;
+    }
+}
+
+@import "variables.scss";

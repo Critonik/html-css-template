@@ -1,16 +1,17 @@
 .find_head-wrapper {
-    width: 1040px;
+    width: 320px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .find_title {
     font-size: 24px;
     line-height: 30px;
     color: #b2b2b2;
-    margin: 0;
+    margin: 0 0 0 10px;
     font-family: $tochkaSansReg;
     font-weight: normal;
 }
@@ -19,13 +20,15 @@
     display: none;
 }
 
-.find_checkbox-wrapper {
-    width: 1040px;
-    margin: 0 auto 60px;
-}
-
 .find_input {
     display: none;
+}
+
+.find_checkbox-wrapper {
+    width: 320px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto 30px;
 }
 
 .find_choose {
@@ -39,6 +42,10 @@
     color: #333333;
     font-family: $tochkaSansReg;
     font-weight: normal;
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .find_input-account:checked ~ .find_choose-account {
@@ -55,3 +62,85 @@
     background-color: #7658e0;
     color: #fff;
 }
+
+@media (min-width: $tablet-width) {
+    .find_head-wrapper {
+        width: 614px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .find_checkbox-wrapper {
+        width: 599px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0 auto 30px;
+    }
+
+    .find_choose {
+        border: 1px solid #eee;
+        box-sizing: border-box;
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 9px 10px;
+        background-color: #fff;
+        color: #333333;
+        font-family: $tochkaSansReg;
+        font-weight: normal;
+        width: 300px;
+        display: inline;
+    }
+
+}
+
+@media (min-width: $desktop-width) {
+    .find_head-wrapper {
+        width: 1040px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .find_title {
+        font-size: 24px;
+        line-height: 30px;
+        color: #b2b2b2;
+        margin: 0;
+        font-family: $tochkaSansReg;
+        font-weight: normal;
+    }
+
+    .find_button {
+        display: none;
+    }
+
+    .find_checkbox-wrapper {
+        width: 1040px;
+        margin: 0 auto 60px;
+    }
+
+    .find_input {
+        display: none;
+    }
+
+    .find_choose {
+        display: inline;
+        border: 1px solid #eee;
+        box-sizing: border-box;
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 9px 10px;
+        background-color: #fff;
+        color: #333333;
+        font-family: $tochkaSansReg;
+        font-weight: normal;
+    }
+}
+
+@import "variables.scss";

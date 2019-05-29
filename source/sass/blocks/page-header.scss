@@ -1,29 +1,28 @@
 .page-header {
-    padding-top: 69px;
     background-image: url("../img/Mask Group-1.png");
-    background-position: center;
+    background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .page-header_wrapper {
-    width: 1040px;
-    margin: 0 auto;
+    padding-top: 69px;
+    width: 320px;
+    margin: 0 auto 60px;
     display: flex;
-    margin-bottom: 60px;
+    flex-wrap: wrap;
 }
 
 .page-header_title {
-    margin: 0;
-    font-size: 60px;
+    width: 300px;
+    margin: 0 auto 30px;
+    font-size: 30px;
     line-height: 100%;
     font-family: $angleciaProTitle;
-    width: 569px;
-    margin-right: auto;
 }
 
 .page-header_button {
-    margin: auto 0;
+    margin: 0 auto;
     padding: 0;
     width: 174px;
     height: 44px;
@@ -47,11 +46,94 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 24px;
-    top: -35px;
-    left: -114px;
+    top: -55px;
+    left: 0;
     width: 44px;
     height: 44px;
     border: 1px solid #e1e1e1;
     border-radius: 50%;
     box-sizing: border-box;
 }
+
+@media (min-width: $tablet-width) {
+    .page-header_wrapper {
+        padding-top: 69px;
+        width: 720px;
+        margin: 0 auto 60px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .page-header_title {
+        width: 300px;
+        margin-bottom: 0;
+        font-size: 30px;
+        line-height: 100%;
+        font-family: $angleciaProTitle;
+        padding-top: 7px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .page-header {
+        padding-top: 69px;
+        background-image: url("../img/Mask Group-1.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .page-header_wrapper {
+        padding: 0;
+        width: 1040px;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 60px;
+    }
+
+    .page-header_title {
+        margin: 0;
+        font-size: 60px;
+        line-height: 100%;
+        font-family: $angleciaProTitle;
+        width: 569px;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    .page-header_button {
+        margin: auto 0;
+        padding: 0;
+        width: 174px;
+        height: 44px;
+        border: 0;
+        color: #fff;
+        background-color: #7658e0;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .page-header_link {
+        position: relative;
+    }
+
+    .page-header_link::before {
+        position: absolute;
+        content: "";
+        background-image: url("../img/Arrow Left.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px;
+        top: -35px;
+        left: -114px;
+        width: 44px;
+        height: 44px;
+        border: 1px solid #e1e1e1;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+}
+
+@import "variables.scss";
