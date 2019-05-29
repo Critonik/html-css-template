@@ -1,0 +1,57 @@
+.page-header {
+    padding-top: 69px;
+    background-image: url("../img/Mask Group-1.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.page-header_wrapper {
+    width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.page-header_title {
+    margin: 0;
+    font-size: 60px;
+    line-height: 100%;
+    font-family: $angleciaProTitle;
+    width: 569px;
+    margin-right: auto;
+}
+
+.page-header_button {
+    margin: auto 0;
+    padding: 0;
+    width: 174px;
+    height: 44px;
+    border: 0;
+    color: #fff;
+    background-color: #7658e0;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.page-header_link {
+    position: relative;
+}
+
+.page-header_link::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/Arrow Left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    top: -35px;
+    left: -114px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #e1e1e1;
+    border-radius: 50%;
+    box-sizing: border-box;
+}

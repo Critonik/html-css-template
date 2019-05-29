@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="/fonts/AngleciaProTitleBlack.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/TochkaSans-Bold.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/TochkaSans-Medium.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/TochkaSans-Regular.otf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/TochkaSans-Demi.otf" as="font" crossorigin="anonymous">
     <title>Выписка</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     <header class="page-header">
-        <a href="#" class="page-header_arrow"></a>
         <div class="page-header_wrapper">
+            <a href="#" class="page-header_link"></a>
             <h1 class="page-header_title">Выписка</h1>
             <button type="submit" class="page-header_button">
                 Создать выписку
@@ -22,31 +27,34 @@
                 <h2 class="find_title">Найти операцию</h2>
                 <button type="submit" class="find_button"></button>
             </div>
-            <div class="find_button-wrapper">
-                <button type="submit" class="find_choose find_choose-account">Расчетный счет ***2876</button>
-                <button type="submit" class="find_choose find_choose-counterparties">Все контрагенты</button>
-                <button type="button" class="find_choose find_choose-date">С начала месяца</button>
+            <div class="find_checkbox-wrapper">
+                <input type="checkbox" class="find_input find_input-account" id="account">
+                <label for="account" class="find_choose find_choose-account">Расчетный счет ***2876</label>
+                <input type="checkbox" class="find_input find_input-counterparties" id="counterparties">
+                <label for="counterparties" class="find_choose find_choose-counterparties">Все контрагенты</label>
+                <input type="checkbox" class="find_input find_input-date" id="date">
+                <label for="date" class="find_choose find_choose-date">С начала месяца</label>
             </div>
         </section>
         <section class="balance">
             <div class="balance_wrapper">
                 <div class="balance_datesum-wrapper">
                     <time class="balance_date balance_date-first" datetime="2019-05">22 марта, сегодня</time>
-                    <p class="balance_sum balance_firstsum">128 000 000</p>
+                    <p class="balance_sum balance_firstsum">128 000 000 ₽</p>
                 </div>
                 <div class="balance_datesum-wrapper">
                     <time class="balance_date balance_date-second" datetime="2019-05">22 марта, сегодня</time>
-                    <p class="balance_sum balance_secondsum">90 000 000</p>
+                    <p class="balance_sum balance_secondsum">90 000 000 ₽</p>
                 </div>
             </div>
             <div class="balance_circulation-wrapper">
                 <div class="balance_coming-wrapper">
                     <p class="balance_coming">Приход: </p>
-                    <p class="balance_coming-in">− 68 000 000</p>
+                    <p class="balance_coming-in">− 68 000 000 ₽</p>
                 </div>
                 <div class="balance_expense-wrapper">
                     <p class="balance_coming">Расход: </p>
-                    <p class="balance_coming-out">+ 30 000 000</p>
+                    <p class="balance_coming-out">+ 30 000 000 ₽</p>
                 </div>
             </div>
         </section>

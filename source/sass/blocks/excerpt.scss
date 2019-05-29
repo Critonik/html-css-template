@@ -48,6 +48,20 @@
 
 .excerpt_list-sum-header {
     color: #b2b2b2;
+    position: relative;
+}
+
+.excerpt_list-sum-header::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/plus.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -9px;
+    right: -51px;
+    background-size: 34px;
+    width: 34px;
+    height: 34px;
 }
 
 .excerpt_list-sum-in {
@@ -81,6 +95,9 @@
     width: 18px;
     height: 18px;
     background-image: url("../img/Checked.png");
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: center;
     position: absolute;
     left: -29px;
     top: -2px;

@@ -19,9 +19,13 @@
     display: none;
 }
 
-.find_button-wrapper {
+.find_checkbox-wrapper {
     width: 1040px;
     margin: 0 auto 60px;
+}
+
+.find_input {
+    display: none;
 }
 
 .find_choose {
@@ -32,6 +36,22 @@
     line-height: 18px;
     padding: 9px 10px;
     background-color: #fff;
+    color: #333333;
     font-family: $tochkaSansReg;
     font-weight: normal;
+}
+
+.find_input-account:checked ~ .find_choose-account {
+    background-color: #7658e0;
+    color: #fff;
+}
+
+.find_input-counterparties:checked ~ .find_choose-counterparties {
+    background-color: #7658e0;
+    color: #fff;
+}
+
+.find_input-date:checked ~ .find_choose-date {
+    background-color: #7658e0;
+    color: #fff;
 }

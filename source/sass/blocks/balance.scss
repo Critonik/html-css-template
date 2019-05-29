@@ -34,21 +34,24 @@
     right: 0;
     background-image: url("../img/ArrowRight.png");
     background-repeat: no-repeat;
-    width: 18px;
-    height: 14px;
-    outline: 1px red solid;
+    background-size: 22px;
+    background-position: center;
+    width: 29px;
+    height: 18px;
 }
 
 .balance_date {
     font-size: 14px;
     line-height: 18px;
     padding: 0 30px;
+    color: #747474;
 }
 
 .balance_sum {
     font-size: 30px;
     line-height: 36px;
     font-family: $tochkaSansDemi;
+    font-weight: bold;
     margin: 0;
     padding: 0 30px;
 }
@@ -87,12 +90,14 @@
     margin: 0;
     font-size: 14px;
     line-height: 18px;
+    color: #747474;
 }
 
 .balance_coming-in {
     margin: 0;
     font-size: 16px;
     line-height: 20px;
+    font-weight: bold;
 }
 
 .balance_coming-out {
@@ -100,4 +105,5 @@
     font-size: 16px;
     line-height: 20px;
     color: #48ac98;
+    font-weight: bold;
 }
