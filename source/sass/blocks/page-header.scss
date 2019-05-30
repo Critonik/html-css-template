@@ -1,5 +1,5 @@
 .page-header {
-    background-image: url("../img/Mask Group-1.png");
+    background-image: url("../img/MaskGroup-1.png");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@
 .page-header_link::before {
     position: absolute;
     content: "";
-    background-image: url("../img/Arrow Left.svg");
+    background-image: url("../img/ArrowLeft.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 24px;
@@ -77,7 +77,7 @@
 @media (min-width: $desktop-width) {
     .page-header {
         padding-top: 69px;
-        background-image: url("../img/Mask Group-1.png");
+        background-image: url("../img/MaskGroup-1.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -122,7 +122,7 @@
     .page-header_link::before {
         position: absolute;
         content: "";
-        background-image: url("../img/Arrow Left.svg");
+        background-image: url("../img/ArrowLeft.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 24px;
