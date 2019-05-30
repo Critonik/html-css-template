@@ -1,92 +1,98 @@
-.excerpt_list {
+.excerpt_table {
     width: 100%;
     padding: 0;
     margin: 0 auto;
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
 
-.excerpt_list-item {
+.excerpt_table-cell {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.excerpt_table-item {
     display: flex;
     width: 90%;
     flex-wrap: wrap;
     padding: 24px 0;
-    margin: 0 auto;
+    margin: 0 auto 5px;
     color: #b2b2b2;
     font-size: 14px;
     line-height: 20px;
     border: 1px #f2f2f2 solid;
-
 }
 
-.excerpt_list-header {
-    display: none;
-}
-
-.excerpt_list-counterparties {
+.excerpt_table-counterparties {
     margin: 0;
     color: #333;
-    width: 100%;
-    margin-bottom: 5px;
     order: 2;
+    width: 100%;
+    text-align: left;
+    margin-right: auto;
 }
 
-.excerpt_list-counterparties-header {
+.excerpt_table-counterparties-header {
     color: #b2b2b2;
 }
 
-.excerpt_list-purpose {
+.excerpt_table-purpose {
     margin: 0;
-    margin-bottom: 5px;
     width: 100%;
     order: 4;
+    text-align: left;
 }
 
-.excerpt_list-sum {
+.excerpt_table-sum {
     margin: 0;
     color: #333;
-    text-align: right;
+    text-align: left;
     font-weight: bold;
-    margin-left: auto;
+    margin-right: auto;
     order: 3;
 }
 
-.excerpt_list-sum-header {
+.excerpt_table-sum-header {
     color: #b2b2b2;
     position: relative;
 }
 
-.excerpt_list-sum-header::after {
+.excerpt_table-header {
+    position: relative;
+}
+
+.excerpt_table-header::after {
     content: "";
     position: absolute;
-    background-image: url("../img/plus.png");
+    background-image: url("../img/plus.svg");
     background-repeat: no-repeat;
     background-position: center;
-    top: -9px;
-    right: -51px;
+    top: -41px;
+    right: 12px;
     background-size: 34px;
     width: 34px;
     height: 34px;
 }
 
-.excerpt_list-sum-in {
+.excerpt_table-sum-in {
     color: #48ac98;
 }
 
-.excerpt_list-checkbox {
+.excerpt_table-checkbox {
     display: none;
 }
 
-.excerpt_list-date {
+.excerpt_table-date {
     width: 100%;
-    margin-left: 34px;
+    margin-left: 27px;
+    margin-right: auto;
     text-align: left;
     position: relative;
     order: 1;
 }
 
-.excerpt_list-date::before {
+.excerpt_table-date::before {
     content: "";
     width: 18px;
     height: 18px;
@@ -97,11 +103,11 @@
     top: -2px;
 }
 
-.excerpt_list-checkbox:checked ~ .excerpt_list-date::before {
+.excerpt_table-checkbox:checked ~ .excerpt_table-date::before {
     content: "";
     width: 18px;
     height: 18px;
-    background-image: url("../img/Checked.png");
+    background-image: url("../img/Checked.svg");
     background-repeat: no-repeat;
     background-size: 22px;
     background-position: center;
@@ -111,11 +117,11 @@
 }
 
 @media (min-width: $tablet-width) {
-    .excerpt_list {
+    .excerpt_table {
         width: 720px;
     }
 
-    .excerpt_list-item {
+    .excerpt_table-item {
         display: flex;
         width: 680px;
         justify-content: space-between;
@@ -123,33 +129,39 @@
         color: #b2b2b2;
         font-size: 16px;
         line-height: 20px;
+        margin-bottom: 0;
         border: 0;
     }
 
-    .excerpt_list-header {
+    .excerpt_table-header {
         color: #b2b2b2;
         font-size: 14px;
         line-height: 18px;
         border-bottom: 1px #b2b2b2 solid;
     }
 
-    .excerpt_list-counterparties {
+    .excerpt_table-cell {
+        display: flex;
+        padding: 0;
+    }
+
+    .excerpt_table-counterparties {
         margin: 0;
         color: #333;
         width: 200px;
     }
 
-    .excerpt_list-counterparties-header {
+    .excerpt_table-counterparties-header {
         color: #b2b2b2;
     }
 
-    .excerpt_list-purpose {
+    .excerpt_table-purpose {
         margin: 0;
         width: 200px;
         order: 3;
     }
 
-    .excerpt_list-sum {
+    .excerpt_table-sum {
         margin: 0;
         color: #333;
         width: 125px;
@@ -157,32 +169,32 @@
         order: 4;
     }
 
-    .excerpt_list-sum-header {
+    .excerpt_table-sum-header {
         color: #b2b2b2;
         position: relative;
     }
 
-    .excerpt_list-sum-header::after {
-        top: -45px;
-        right: 0;
+    .excerpt_table-header::after {
+        top: -19px;
+        right: 10px;
     }
 
-    .excerpt_list-sum-in {
+    .excerpt_table-sum-in {
         color: #48ac98;
     }
 
-    .excerpt_list-checkbox {
+    .excerpt_table-checkbox {
         display: none;
     }
 
-    .excerpt_list-date {
+    .excerpt_table-date {
         width: 114px;
         margin-left: 34px;
         text-align: left;
         position: relative;
     }
 
-    .excerpt_list-date::before {
+    .excerpt_table-date::before {
         content: "";
         width: 18px;
         height: 18px;
@@ -193,11 +205,11 @@
         top: -2px;
     }
 
-    .excerpt_list-checkbox:checked ~ .excerpt_list-date::before {
+    .excerpt_table-checkbox:checked ~ .excerpt_table-date::before {
         content: "";
         width: 18px;
         height: 18px;
-        background-image: url("../img/Checked.png");
+        background-image: url("../img/Checked.svg");
         background-repeat: no-repeat;
         background-size: 22px;
         background-position: center;
@@ -209,16 +221,15 @@
 
 
 @media (min-width: $desktop-width) {
-    .excerpt_list {
+    .excerpt_table {
         width: 1040px;
         padding: 0;
         margin: 0 auto;
-        list-style: none;
         display: flex;
         flex-wrap: wrap;
     }
 
-    .excerpt_list-item {
+    .excerpt_table-item {
         display: flex;
         width: 1040px;
         justify-content: space-between;
@@ -228,69 +239,69 @@
         line-height: 20px;
     }
 
-    .excerpt_list-header {
+    .excerpt_table-header {
         color: #b2b2b2;
         font-size: 14px;
         line-height: 18px;
         border-bottom: 1px #b2b2b2 solid;
     }
 
-    .excerpt_list-counterparties {
+    .excerpt_table-counterparties {
         margin: 0;
         color: #333;
         width: 300px;
     }
 
-    .excerpt_list-counterparties-header {
+    .excerpt_table-counterparties-header {
         color: #b2b2b2;
     }
 
-    .excerpt_list-purpose {
+    .excerpt_table-purpose {
         margin: 0;
         width: 400px;
     }
 
-    .excerpt_list-sum {
+    .excerpt_table-sum {
         margin: 0;
         color: #333;
         width: 125px;
         text-align: right;
     }
 
-    .excerpt_list-sum-header {
+    .excerpt_table-sum-header {
         color: #b2b2b2;
         position: relative;
     }
 
-    .excerpt_list-sum-header::after {
+    .excerpt_table-header::after {
         content: "";
         position: absolute;
-        background-image: url("../img/plus.png");
+        background-image: url("../img/plus.svg");
         background-repeat: no-repeat;
         background-position: center;
-        top: -9px;
-        right: -51px;
+        top: 14px;
+        right: 20px;
         background-size: 34px;
         width: 34px;
         height: 34px;
     }
 
-    .excerpt_list-sum-in {
+    .excerpt_table-sum-in {
         color: #48ac98;
     }
 
-    .excerpt_list-checkbox {
+    .excerpt_table-checkbox {
         display: none;
     }
 
-    .excerpt_list-date {
+    .excerpt_table-date {
         width: 114px;
         margin-left: 34px;
         text-align: left;
         position: relative;
     }
 
-    .excerpt_list-date::before {
+    .excerpt_table-date::before {
         content: "";
         width: 18px;
         height: 18px;
@@ -301,11 +312,11 @@
         top: -2px;
     }
 
-    .excerpt_list-checkbox:checked ~ .excerpt_list-date::before {
+    .excerpt_table-checkbox:checked ~ .excerpt_table-date::before {
         content: "";
         width: 18px;
         height: 18px;
-        background-image: url("../img/Checked.png");
+        background-image: url("../img/Checked.svg");
         background-repeat: no-repeat;
         background-size: 22px;
         background-position: center;

@@ -1,8 +1,8 @@
 {
-  "name": "pink-16",
+  "name": "excerpt",
   "version": "16.0.0",
   "private": true,
-  "description": "Личный проект «Пинк» от HTML Academy",
+  "description": "Выписка для Точка 1.5",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
