@@ -1,5 +1,5 @@
-.excerpt_table {
-    width: 100%;
+.excerpt {
+    width: $nonfullwidth;
     padding: 0;
     margin: 0 auto;
     display: flex;
@@ -10,12 +10,13 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 20px;
-    width: 100%;
+    width: $nonfullwidth;
+    margin-bottom: 5px;
 }
 
 .excerpt_table-item {
     display: flex;
-    width: 90%;
+    width: $nonfullwidth;
     flex-wrap: wrap;
     padding: 24px 0;
     margin: 0 auto 5px;
@@ -23,16 +24,20 @@
     font-size: 16px;
     line-height: 20px;
     border: 1px #f2f2f2 solid;
+    border-radius: 6%;
 }
 
 .excerpt_table-counterparties {
     margin: 0;
     color: #333;
     order: 2;
-    width: 100%;
+    width: $nonfullwidth;
     text-align: left;
     margin-right: auto;
     font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .excerpt_table-counterparties-header {
@@ -41,10 +46,13 @@
 
 .excerpt_table-purpose {
     margin: 0;
-    width: 100%;
+    width: 85%;
     order: 4;
     text-align: left;
     font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .excerpt_table-sum {
@@ -55,6 +63,9 @@
     margin-right: auto;
     order: 3;
     font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .excerpt_table-sum-header {
@@ -88,19 +99,21 @@
 }
 
 .excerpt_table-date {
-    width: 100%;
+    width: $nonfullwidth;
     margin-left: 27px;
     margin-right: auto;
     text-align: left;
     position: relative;
     order: 1;
-    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
 }
 
 .excerpt_table-date::before {
     content: "";
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border: 1px solid #b2b2b2;
     border-radius: 2px;
     position: absolute;
@@ -117,25 +130,33 @@
     background-size: 22px;
     background-position: center;
     position: absolute;
+    border: none;
     left: -29px;
     top: -2px;
 }
 
+@media (min-width: $fablet-width) {
+    .excerpt_table-cell {
+        width: 95%;
+    }
+
+    .excerpt_table-date {
+        width: 45%;
+        margin-right: 0;
+    }
+}
+
 @media (min-width: $tablet-width) {
-    .excerpt_table {
-        width: 720px;
+    .excerpt {
+        width: $fullwidth;
     }
 
     .excerpt_table-item {
-        display: flex;
-        width: 680px;
+        width: $nonfullwidth;
         justify-content: space-between;
-        padding: 24px 0;
-        color: #b2b2b2;
-        font-size: 16px;
-        line-height: 20px;
         margin-bottom: 0;
         border: 0;
+        border-radius: 0;
     }
 
     .excerpt_table-header {
@@ -146,38 +167,24 @@
     }
 
     .excerpt_table-cell {
-        display: flex;
         padding: 0;
         width: auto;
     }
 
     .excerpt_table-counterparties {
         margin: 0;
-        color: #333;
         width: 200px;
     }
 
-    .excerpt_table-counterparties-header {
-        color: #b2b2b2;
-    }
-
     .excerpt_table-purpose {
-        margin: 0;
         width: 200px;
         order: 3;
     }
 
     .excerpt_table-sum {
-        margin: 0;
-        color: #333;
         width: 125px;
         text-align: right;
         order: 4;
-    }
-
-    .excerpt_table-sum-header {
-        color: #b2b2b2;
-        position: relative;
     }
 
     .excerpt_table-header::after {
@@ -185,151 +192,35 @@
         right: 10px;
     }
 
-    .excerpt_table-sum-in {
-        color: #48ac98;
-    }
-
-    .excerpt_table-checkbox {
-        display: none;
-    }
-
     .excerpt_table-date {
         width: 114px;
         margin-left: 34px;
-        text-align: left;
-        position: relative;
     }
 
-    .excerpt_table-date::before {
-        content: "";
-        width: 18px;
-        height: 18px;
-        border: 1px solid #b2b2b2;
-        border-radius: 2px;
-        position: absolute;
-        left: -29px;
-        top: -2px;
-    }
-
-    .excerpt_table-checkbox:checked ~ .excerpt_table-date::before {
-        content: "";
-        width: 18px;
-        height: 18px;
-        background-image: url("../img/Checked.svg");
-        background-repeat: no-repeat;
-        background-size: 22px;
-        background-position: center;
-        position: absolute;
-        left: -29px;
-        top: -2px;
-    }
 }
 
-
 @media (min-width: $desktop-width) {
-    .excerpt_table {
-        width: 1040px;
-        padding: 0;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
+    .excerpt {
+        width: $nonfullwidth;
     }
 
     .excerpt_table-item {
-        display: flex;
-        width: 1040px;
-        justify-content: space-between;
-        padding: 24px 0;
-        color: #b2b2b2;
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    .excerpt_table-header {
-        color: #b2b2b2;
-        font-size: 16px;
-        line-height: 18px;
-        border-bottom: 1px #b2b2b2 solid;
+        width: 90%;
     }
 
     .excerpt_table-counterparties {
-        margin: 0;
-        color: #333;
         width: 300px;
     }
 
-    .excerpt_table-counterparties-header {
-        color: #b2b2b2;
-    }
-
     .excerpt_table-purpose {
-        margin: 0;
         width: 400px;
     }
 
-    .excerpt_table-sum {
-        margin: 0;
-        color: #333;
-        width: 125px;
-        text-align: right;
-    }
-
-    .excerpt_table-sum-header {
-        color: #b2b2b2;
-        position: relative;
-    }
-
     .excerpt_table-header::after {
-        content: "";
-        position: absolute;
-        background-image: url("../img/plus.svg");
-        background-repeat: no-repeat;
-        background-position: center;
         top: 14px;
         right: -47px;
-        background-size: 34px;
-        width: 34px;
-        height: 34px;
     }
 
-    .excerpt_table-sum-in {
-        color: #48ac98;
-    }
-
-    .excerpt_table-checkbox {
-        display: none;
-    }
-
-    .excerpt_table-date {
-        width: 114px;
-        margin-left: 34px;
-        text-align: left;
-        position: relative;
-    }
-
-    .excerpt_table-date::before {
-        content: "";
-        width: 18px;
-        height: 18px;
-        border: 1px solid #b2b2b2;
-        border-radius: 2px;
-        position: absolute;
-        left: -29px;
-        top: -2px;
-    }
-
-    .excerpt_table-checkbox:checked ~ .excerpt_table-date::before {
-        content: "";
-        width: 18px;
-        height: 18px;
-        background-image: url("../img/Checked.svg");
-        background-repeat: no-repeat;
-        background-size: 22px;
-        background-position: center;
-        position: absolute;
-        left: -29px;
-        top: -2px;
-    }
 }
 
 @import "variables.scss";

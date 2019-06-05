@@ -3,11 +3,12 @@
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
+    width: $fullwidth;
 }
 
 .page-header_wrapper {
-    padding-top: 69px;
-    width: 320px;
+    padding-top: 100px;
+    width: $nonfullwidth;
     margin: 0 auto 60px;
     display: flex;
     flex-wrap: wrap;
@@ -15,14 +16,14 @@
 
 .page-header_title {
     width: 300px;
-    margin: 0 auto 30px;
-    font-size: 30px;
-    line-height: 100%;
+    margin: 0 auto 30px 0;
+    font-size: 40px;
+    line-height: $fullwidth;
     font-family: $angleciaProTitle;
+    font-weight: 600;
 }
 
 .page-header_button {
-    margin: 0 auto;
     padding: 0;
     width: 174px;
     height: 44px;
@@ -32,6 +33,7 @@
     border-radius: 6px;
     font-size: 16px;
     line-height: 20px;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -46,7 +48,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 24px;
-    top: -55px;
+    top: 0;
     left: 0;
     width: 44px;
     height: 44px;
@@ -57,30 +59,22 @@
 
 @media (min-width: $tablet-width) {
     .page-header_wrapper {
-        padding-top: 69px;
-        width: 720px;
-        margin: 0 auto 60px;
-        display: flex;
-        flex-wrap: wrap;
+        width: $nonfullwidth;
     }
 
     .page-header_title {
-        width: 300px;
         margin-bottom: 0;
-        font-size: 30px;
-        line-height: 100%;
-        font-family: $angleciaProTitle;
-        padding-top: 7px;
+        font-size: 50px;
+    }
+
+    .page-header_button {
+        margin-top: auto;
     }
 }
 
 @media (min-width: $desktop-width) {
     .page-header {
-        padding-top: 69px;
-        background-image: url("../img/MaskGroup-1.png");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
+        padding-top: 114px;
     }
 
     .page-header_wrapper {
@@ -94,8 +88,6 @@
     .page-header_title {
         margin: 0;
         font-size: 60px;
-        line-height: 100%;
-        font-family: $angleciaProTitle;
         width: 569px;
         margin-right: auto;
         text-align: left;
@@ -103,36 +95,11 @@
 
     .page-header_button {
         margin: auto 0;
-        padding: 0;
-        width: 174px;
-        height: 44px;
-        border: 0;
-        color: #fff;
-        background-color: #7658e0;
-        border-radius: 6px;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-    }
-
-    .page-header_link {
-        position: relative;
     }
 
     .page-header_link::before {
-        position: absolute;
-        content: "";
-        background-image: url("../img/ArrowLeft.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 24px;
-        top: -35px;
-        left: -114px;
-        width: 44px;
-        height: 44px;
-        border: 1px solid #e1e1e1;
-        border-radius: 50%;
-        box-sizing: border-box;
+        top: -84px;
+        left: -2px;
     }
 }
 

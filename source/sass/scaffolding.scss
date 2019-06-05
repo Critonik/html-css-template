@@ -3,7 +3,7 @@
     font-family: "TochkaSans-Bold";
     font-style: normal;
     font-display: swap;
-    src: url("../fonts/TochkaSans-Bold.otf") format("opentype");
+    src: url("../fonts/TochkaSans-Bold.woff2") format("woff2"), url("../fonts/TochkaSans-Bold.woff") format("woff"),;
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-family: "TochkaSans-Medium";
     font-style: normal;
     font-display: swap;
-    src: url("../fonts/TochkaSans-Medium.otf") format("opentype");
+    src: url("../fonts/TochkaSans-Medium.woff2") format("woff2"), url("../fonts/TochkaSans-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     font-family: "TochkaSans-Regular";
     font-style: normal;
     font-display: swap;
-    src: url("../fonts/TochkaSans-Regular.otf") format("opentype");
+    src: url("../fonts/TochkaSans-Regular.woff2") format("woff2"), url("../fonts/TochkaSans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
     font-family: "TochkaSans-Demi";
     font-style: normal;
     font-display: swap;
-    src: url("../fonts/TochkaSans-Demi.otf") format("opentype");
+    src: url("../fonts/TochkaSans-Demi.woff2") format("woff2"), url("../fonts/TochkaSans-Demi.woff") format("woff");
 }
 
 @font-face {
@@ -35,5 +35,5 @@
     font-family: "AngleciaProTitleBlack";
     font-style: normal;
     font-display: swap;
-    src: url("../fonts/AngleciaProTitleBlack.otf") format("opentype");
+    src: url("../fonts/AngleciaProTitleBlack.woff2") format("woff2"), url("../fonts/AngleciaProTitleBlack.woff") format("woff");
 }

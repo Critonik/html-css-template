@@ -1,5 +1,5 @@
 .balance {
-    width: 320px;
+    width: $nonfullwidth;
     margin: 0 auto 60px;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@
 .balance_wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 320px;
+    width: $nonfullwidth;
     margin-right: auto;
     padding: 30px 0 25px;
     border-radius: 10px;
@@ -19,14 +19,14 @@
 
 .balance_datesum-wrapper {
     position: relative;
-    width: 320px;
+    width: 85%;
     margin-bottom: 10px;
 }
 
 .balance_datesum-wrapper:first-child::after {
     content: "";
     position: absolute;
-    top: 105%;
+    top: 114%;
     right: 32px;
     transform: rotate(90deg);
     background-image: url("../img/ArrowRight.svg");
@@ -40,6 +40,7 @@
 .balance_date {
     font-size: 14px;
     line-height: 18px;
+    font-weight: 500;
     padding: 0 30px;
     color: #747474;
 }
@@ -48,21 +49,21 @@
     font-size: 30px;
     line-height: 36px;
     font-family: $tochkaSansDemi;
-    font-weight: bold;
+    font-weight: 500;
     margin: 0;
     padding: 0 30px;
 }
 
 .balance_coming-wrapper {
     display: flex;
-    width: 210px;
+    width: 72%;
     margin: 0 auto;
     justify-content: space-between;
 }
 
 .balance_expense-wrapper {
     display: flex;
-    width: 210px;
+    width: 72%;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -87,8 +88,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 30px 0;
-    width: 270px;
-    margin: 0 auto;
+    width: 80%;
     border-radius: 10px;
     box-shadow: 0 20px 40px rgba(51, 51, 51, 0.1);
 }
@@ -97,6 +97,7 @@
     margin: 0;
     font-size: 14px;
     line-height: 18px;
+    font-weight: 500;
     color: #747474;
 }
 
@@ -104,7 +105,7 @@
     margin: 0;
     font-size: 16px;
     line-height: 20px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .balance_coming-out {
@@ -112,22 +113,26 @@
     font-size: 16px;
     line-height: 20px;
     color: #48ac98;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 @media (min-width: $tablet-width) {
     .balance {
-        width: 680px;
+        width: $nonfullwidth;
     }
 
     .balance_wrapper {
-        width: 680px;
+        width: $nonfullwidth;
     }
 
     .balance_datesum-wrapper:first-child::after {
         transform: none;
         top: 40%;
         right: 23px;
+    }
+
+    .balance_datesum-wrapper {
+        width: 50%;
     }
 
     .balance_circulation-wrapper {
@@ -143,69 +148,28 @@
     .balance {
         width: 1040px;
         margin: 0 auto 60px;
-        display: flex;
-        justify-content: space-between;
         flex-wrap: nowrap;
         flex-shrink: 1;
         flex-direction: row;
     }
 
     .balance_wrapper {
-        display: flex;
         width: 724px;
-        margin-right: auto;
         margin-bottom: 0;
-        padding: 30px 0 25px;
-        border-radius: 10px;
-        box-shadow: 0 20px 40px rgba(51, 51, 51, 0.1);
     }
 
     .balance_circulation-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 40px 0 30px;
         width: 270px;
-        border-radius: 10px;
-        box-shadow: 0 20px 40px rgba(51, 51, 51, 0.1);
+        padding: 40px 0 30px;
     }
 
     .balance_datesum-wrapper {
-        position: relative;
+        margin-bottom: 0;
     }
 
     .balance_datesum-wrapper:first-child::after {
-        top: 50%;
-        right: 0;
-    }
-
-    .balance_date {
-        font-size: 14px;
-        line-height: 18px;
-        padding: 0 30px;
-        color: #747474;
-    }
-
-    .balance_sum {
-        font-size: 30px;
-        line-height: 36px;
-        font-family: $tochkaSansDemi;
-        font-weight: bold;
-        margin: 0;
-        padding: 0 30px;
-    }
-
-    .balance_coming-wrapper {
-        display: flex;
-        width: 210px;
-        margin: 0 auto;
-        justify-content: space-between;
-    }
-
-    .balance_expense-wrapper {
-        display: flex;
-        width: 210px;
-        margin: 0 auto;
-        justify-content: space-between;
+        top: 40%;
+        right: 28px;
     }
 
     .balance_firstsum {
@@ -218,32 +182,6 @@
 
     .balance_date-first {
         width: 288px;
-    }
-
-    .balance_date-second {
-        width: 316px;
-    }
-
-    .balance_coming {
-        margin: 0;
-        font-size: 14px;
-        line-height: 18px;
-        color: #747474;
-    }
-
-    .balance_coming-in {
-        margin: 0;
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: bold;
-    }
-
-    .balance_coming-out {
-        margin: 0;
-        font-size: 16px;
-        line-height: 20px;
-        color: #48ac98;
-        font-weight: bold;
     }
 }
 
