@@ -18,23 +18,20 @@
 }
 
 .balance_datesum-wrapper {
-    position: relative;
     width: 85%;
     margin-bottom: 10px;
 }
 
-.balance_datesum-wrapper:first-child::after {
+.balance_arrow {
+    position: relative;
+}
+
+.balance_arrow-image {
     content: "";
     position: absolute;
-    top: 114%;
-    right: 32px;
+    top: 65px;
+    right: -10px;
     transform: rotate(90deg);
-    background-image: url("../img/ArrowRight.svg");
-    background-repeat: no-repeat;
-    background-size: 22px;
-    background-position: center;
-    width: 29px;
-    height: 18px;
 }
 
 .balance_date {
@@ -116,6 +113,18 @@
     font-weight: 500;
 }
 
+@media (min-width: $fablet-width) {
+    .balance_datesum-wrapper {
+        width: 50%;
+    }
+
+    .balance_arrow-image {
+        transform: none;
+        top: 33px;
+        right: -24px;
+    }
+}
+
 @media (min-width: $tablet-width) {
     .balance {
         width: $nonfullwidth;
@@ -125,8 +134,7 @@
         width: $nonfullwidth;
     }
 
-    .balance_datesum-wrapper:first-child::after {
-        transform: none;
+    .balance_arrow-image {
         top: 40%;
         right: 23px;
     }
@@ -146,7 +154,7 @@
 
 @media (min-width: $desktop-width) {
     .balance {
-        width: 1040px;
+        width: $maxwidth;
         margin: 0 auto 60px;
         flex-wrap: nowrap;
         flex-shrink: 1;
@@ -167,10 +175,10 @@
         margin-bottom: 0;
     }
 
-    .balance_datesum-wrapper:first-child::after {
+    /*.balance_datesum-wrapper:first-child::after {
         top: 40%;
         right: 28px;
-    }
+    }*/
 
     .balance_firstsum {
         width: 288px;

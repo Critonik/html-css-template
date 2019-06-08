@@ -10,7 +10,8 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 20px;
-    width: $nonfullwidth;
+    width: 90%;
+    box-sizing: border-box;
     margin-bottom: 5px;
 }
 
@@ -24,7 +25,7 @@
     font-size: 16px;
     line-height: 20px;
     border: 1px #f2f2f2 solid;
-    border-radius: 6%;
+    border-radius: 10px;
 }
 
 .excerpt_table-counterparties {
@@ -189,7 +190,7 @@
 
     .excerpt_table-header::after {
         top: -19px;
-        right: 10px;
+        right: 0;
     }
 
     .excerpt_table-date {
@@ -202,25 +203,28 @@
 @media (min-width: $desktop-width) {
     .excerpt {
         width: $nonfullwidth;
+        max-width: $maxwidth;
     }
 
     .excerpt_table-item {
-        width: 90%;
+        width: $fullwidth;
     }
 
     .excerpt_table-counterparties {
-        width: 300px;
+        width: 280px;
     }
 
     .excerpt_table-purpose {
         width: 400px;
     }
-
-    .excerpt_table-header::after {
-        top: 14px;
-        right: -47px;
-    }
-
 }
+
+@media (min-width: $wide-format) {
+    .excerpt_table-header::after {
+        top: 13px;
+        right: -73px;
+    }
+}
+
 
 @import "variables.scss";

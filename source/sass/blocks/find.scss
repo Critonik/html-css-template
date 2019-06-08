@@ -17,7 +17,6 @@
     color: #b2b2b2;
     margin: 0 0 0 10px;
     font-family: $tochkaSansReg;
-    font-weight: 500;
 }
 
 .find_button {
@@ -40,7 +39,7 @@
     border: 1px solid #eee;
     box-sizing: border-box;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
     font-weight: 400;
     padding: 27px 10px;
@@ -98,13 +97,12 @@
 
     .find_choose {
         display: inline;
-        font-size: 16px;
     }
 }
 
 @media (min-width: $desktop-width) {
     .find_head-wrapper {
-        width: 1040px;
+        width: $maxwidth;
         margin-bottom: 40px;
     }
 
@@ -113,7 +111,7 @@
     }
 
     .find_checkbox-wrapper {
-        width: 1040px;
+        width: $maxwidth;
         margin: 0 auto 60px;
     }
 
