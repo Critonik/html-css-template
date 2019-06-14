@@ -16,7 +16,10 @@
     line-height: 30px;
     color: #b2b2b2;
     margin: 0 0 0 10px;
+    opacity: 0.5;
+    border: 0;
     font-family: $tochkaSansReg;
+    outline: none;
 }
 
 .find_button {
@@ -52,6 +55,7 @@
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
+    @include overflow;
 }
 
 .find_input-account:checked ~ .find_choose-account {

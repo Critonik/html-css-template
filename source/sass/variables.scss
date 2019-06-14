@@ -10,3 +10,8 @@ $tochkaSansBold: "TochkaSans-Bold", "Arial", sans-serif;
 $tochkaSansReg: "TochkaSans-Regular", "Arial", sans-serif;
 $tochkaSansDemi: "TochkaSans-Demi", "Arial", sans-serif;
 $angleciaProTitle: "AngleciaProTitleBlack", "Arial", sans-serif;
+@mixin overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+};
