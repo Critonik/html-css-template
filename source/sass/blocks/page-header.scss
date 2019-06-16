@@ -79,7 +79,7 @@
 
     .page-header_wrapper {
         padding: 0;
-        width: $maxwidth;
+        width: $nonfullwidth;
         margin: 0 auto;
         display: flex;
         margin-bottom: 60px;
@@ -100,6 +100,12 @@
     .page-header_link::before {
         top: -84px;
         left: 8px;
+    }
+}
+
+@media (min-width: $wide-format) {
+    .page-header_wrapper {
+        width: $maxwidth;
     }
 }
 
