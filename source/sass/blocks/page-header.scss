@@ -8,7 +8,7 @@
 
 .page-header_wrapper {
     padding-top: 100px;
-    width: $nonfullwidth;
+    width: 95%;
     margin: 0 auto 60px;
     display: flex;
     flex-wrap: wrap;
@@ -58,10 +58,6 @@
 }
 
 @media (min-width: $tablet-width) {
-    .page-header_wrapper {
-        width: $nonfullwidth;
-    }
-
     .page-header_title {
         margin-bottom: 0;
         font-size: 50px;
